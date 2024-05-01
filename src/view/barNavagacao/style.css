@@ -1,0 +1,50 @@
+.barNav{
+    width: 100vw;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(240,240,240) 0px 0px 0px 1px;
+}
+
+.barNav > img{
+    width: 190px;
+}
+
+.barNav > ul{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barNav > ul > li{
+    width: 120px;
+    /* padding: 0 1rem; */
+    text-align: center;
+   
+}
+
+.barNav > ul > li > a{
+    cursor: pointer;
+    color:#592525;
+    font-weight: 500;
+    letter-spacing: normal;
+    transition: all .4s;
+}
+
+.barNav > ul > li:hover > a{
+    color:#BF4F45;
+    letter-spacing: 1px;
+}
+
+.btnNavBar{
+    background-color: #F2762E;
+    color:#FFF;
+    transition: all .4s;
+}
+
+
+.btnNavBar:hover{
+    background-color: #592525;
+}
