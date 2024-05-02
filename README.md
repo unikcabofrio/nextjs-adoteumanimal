@@ -3,7 +3,6 @@
 
 site criado em next focado em adoção de animal
 
-
 ## Stack utilizada
 
 **Front-end:** React, NextJs, Html, CSS
@@ -21,11 +20,17 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 - Preview em tempo real
 - Multiplataforma
 
-<!-- ## Erros a corrigir -->
+## Fututas atualizações
 
-<!-- ## Melhorias
+- Adicionar função nos botões : Cadastra um pet - Adotar - Detalhes
+- Adicionar Footer no site
+- Adiciona Página [ Como adotar ]
+- Adiciona Página [ Sobre ]
+- Adiciona Página [ FAQ ]
 
-- Foi adicionado um sistema de busca de Endereço pela API - [CEP Promise](https://github.com/BrasilAPI/cep-promise) -->
+## Melhorias
+
+- Foi adicionado um sistema de busca
 
 ## Autores
 
