@@ -13,8 +13,15 @@ li {
 }
 
 img{
-    width: 50px;
+    width: auto;
     height: auto;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .notScroll::-webkit-scrollbar {

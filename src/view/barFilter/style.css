@@ -1,0 +1,12 @@
+.filterLista{
+    padding: 1rem 4rem;
+}
+
+.filterLista > div {
+    background-color: #BF4F45;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,3 +1,5 @@
+'use client'
+
 import './style.css'
 
 import Logo from '@/assets/logo.png'

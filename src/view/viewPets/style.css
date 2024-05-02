@@ -1,4 +1,97 @@
 .viewPets{
     width: 100%;
-    padding: 0 4rem;
+    height: 100vh;
+    padding: 1rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.boxPets{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    scale: .97;
+    transition: all .2s;
+}
+
+.boxPets:hover{
+    scale: 1;
+}
+
+.boxPets > img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.boxPets > .info {
+    padding: 1rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nomeIdade > span:first-child{
+    font-size: 1.5rem;
+    color: #F2762E;
+    font-weight: 600;
+}
+
+.boxPets > .info > div > span{
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+}
+
+.boxPets > .info > div >  span > span{
+    font-size: .9rem;
+    color: #F2762E;
+}
+
+.boxPets > p{
+    font-size: 1rem;
+    margin: 0 .5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #414141;
+    border-top: 1px solid rgba(242, 118, 46,.5);
+    border-bottom:  1px solid rgba(242, 118, 46,.5);
+}
+
+
+.boxPets > .button{
+    display: flex;
+    padding: 1rem .5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnBoxPets{
+    width: 45%;
+    background-color: #F2762E;
+    border: 1px solid #FFF;
+    color:#FFF;
+    transition: all .5s;
+}
+
+.btnBoxPets:hover{
+    background-color: #592525;
+    border: 1px solid #592525;
+    color:#FFF;
+}
+
+.details{
+    background-color: #FFF;
+    color:#F2762E;
+}
+
+.details:hover{
+    background-color: #F2762E;
+    border: 1px solid #F2762E;
+    color:#FFF;
 }
