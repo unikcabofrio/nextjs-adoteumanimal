@@ -10,3 +10,22 @@
     align-items: center;
     justify-content: center;
 }
+
+.btnFilter{
+    background-color: #F2762E;
+    color: #FFF;
+    padding: .7rem;
+    margin-left: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all .5s;
+}
+
+.btnFilter > span{
+    margin-right: 1rem;
+}
+
+.btnFilter:hover{
+    background-color: #592525;
+}

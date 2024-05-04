@@ -1,5 +1,5 @@
 import { Select } from "@/services/dataService";
-import { Sexo,Tipo } from "./dadosSelect";
+import { Sexo, Tipo, UfCitys } from "./dadosSelect";
 
 export let listPets = []
 export let listMenu = []
@@ -9,37 +9,50 @@ export function FilterListPet(filter) {
     listPets = shuffle(listPets);
 
     listPets = listPets.filter(pet => {
-        if (filter.estado !== "" && pet.estado !== filter.estado) {return false;}
-        if (filter.cidade !== "" && pet.cidade !== filter.cidade) {return false;}
-        if (filter.tipo !== "" && pet.tipo !== filter.tipo) {return false;}
-        if (filter.genero !== "" && pet.genero !== filter.genero) {return false;}
+        if (filter.estado !== "" && pet.estado !== filter.estado) { return false; }
+        if (filter.cidade !== "" && pet.cidade !== filter.cidade) { return false; }
+        if (filter.tipo !== "" && pet.tipo !== filter.tipo) { return false; }
+        if (filter.genero !== "" && pet.genero !== filter.genero) { return false; }
         return true;
     });
 
     return listPets;
 }
 
-export function listarFiltros(key,array) {
+export function listarFiltros(key, array) {
     var todosJSON = [];
 
-    if(array){
-        array.forEach((elemento)=>{
+    if (array) {
+        array.forEach((elemento) => {
             if (key === 'genero') todosJSON.push(Sexo[elemento[key]])
             else if (key === 'tipo') todosJSON.push(Tipo[elemento[key]])
             else todosJSON.push(elemento[key])
         })
-    }else{
-        Select().forEach((elemento)=>{
+    } else {
+        Select().forEach((elemento) => {
             if (key === 'genero') todosJSON.push(Sexo[elemento[key]])
             else if (key === 'tipo') todosJSON.push(Tipo[elemento[key]])
             else todosJSON.push(elemento[key])
         })
     }
 
-   
     const uniqueValues = [...new Set(todosJSON)];
     uniqueValues.sort();
     return uniqueValues
+}
+
+export function listaUF() {
+    return Object.keys(UfCitys[0])
+}
+
+export function listaCity(filterUF) {
+    var todosJSON = [];
+    if (filterUF) {
+        Select().forEach((elemento) => { if (elemento.estado.includes(filterUF)) { todosJSON.push(elemento.cidade) } })
+    } else {
+        Select().forEach((elemento) => { todosJSON.push(elemento.cidade) })
+    }
+    return todosJSON
 }
 
 function shuffle(array) {

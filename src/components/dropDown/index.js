@@ -31,11 +31,13 @@ export function Dropdown(props) {
                 <Icone nome={'expand_more'} />
             </div>
             <div className={`dropdown-content ${active ? 'ativo' : ''}`}>
-                {
-                    props.lista.map((item, index) => {
-                        return <div onClick={props.onClick} key={index}>{item}</div>
-                    })
-                }
+                <div className='notScroll'>
+                    {
+                        props.lista.map((item, index) => {
+                            return <div onClick={props.onClick} key={index}>{item}</div>
+                        })
+                    }
+                </div>
             </div>
         </div>
     );

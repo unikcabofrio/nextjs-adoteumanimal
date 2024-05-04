@@ -1,0 +1,59 @@
+.cadotar{
+    background-color: #BF4F45;
+    height: 100vh;
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.cadotar > h1{
+    font-size: 4rem;
+}
+
+.cadotar > p{
+    font-size: 1.2rem;
+    color: #592525;
+}
+
+.cadotar > p > a{
+    margin-left: .5rem;
+    color: #FFF;
+}
+
+.cadotar > p > a:hover{
+    color: #F2762E;
+}
+
+.cadotar > div{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.cadotar > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    text-align: center;
+    cursor: default;
+    font-size: 1.5rem;
+}
+
+.cadotar > div > div > span{
+    font-size: 5rem;
+    color: #592525;
+    transition: all .5s;
+}
+
+.cadotar > div > div:hover > span{
+    color: #F2762E;
+}
+
+.cadotar > div > div > p{
+    font-size: 1rem;
+    margin-top: 1rem;
+}

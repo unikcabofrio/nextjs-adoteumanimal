@@ -1,0 +1,54 @@
+.sobre{
+    height: 100vh;
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre > div{
+    width: 80%;
+    background-color: #F2762E;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.sobre > div > h1{
+    font-size: 4rem;
+}
+
+.sobre > div > img{
+    width: 25%;
+    transition: all .5s;
+    
+}
+
+.sobre > div > img:hover{
+    
+    animation: hearter 1.3s infinite;
+}
+
+.sobre > div > p{
+    text-align: center;
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+@keyframes hearter {
+    0% {
+        scale: .9;
+    }
+
+    50% {
+        scale: 1;
+    }
+  
+    100% {
+        scale: .9;
+    }
+  }

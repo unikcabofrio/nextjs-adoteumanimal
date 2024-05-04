@@ -1,9 +1,10 @@
 import './style.css'
 import { Sexo,Tipo } from "@/utils/dadosSelect";
-import { listarFiltros } from '@/utils/filterLista'
+import { listarFiltros,listaUF,listaCity } from '@/utils/filterLista'
 import { Dropdown } from "@/components/dropDown"
+import { Button } from '@/components/button';
 
-export default function BarFilter({desc, setDesc,listPets}) {
+export default function BarFilter({desc, setDesc}) {
 
     function handleClick(key,value){
 
@@ -15,6 +16,13 @@ export default function BarFilter({desc, setDesc,listPets}) {
             value = Tipo.indexOf(value)
             if(value === -1) value = ''
         }
+        else if (key === 'estado'){
+            if(value === 'Todos') value = ''
+            setDesc(prevState => ({
+                ...prevState,
+                ['cidade']: ''
+            }));
+        }
         else{
             if(value === 'Todos') value = ''
         }
@@ -22,9 +30,12 @@ export default function BarFilter({desc, setDesc,listPets}) {
         setDesc(prevState => ({
             ...prevState,
             [key]: value
-        }));
-        
+        }));  
     }   
+
+    function ResetDes(){
+        setDesc({ estado: '', cidade: '', tipo: '', genero: '' })
+    }
 
     return (
         <div className="filterLista">
@@ -33,14 +44,14 @@ export default function BarFilter({desc, setDesc,listPets}) {
                     titulo={'Estado'}
                     desc={desc['estado'] ? desc['estado'] : 'Todos'}
                     icone={'location_on'}
-                    lista={['Todos',...listarFiltros('estado')]}
+                    lista={['Todos',...listaUF()]}
                     onClick={(e) => { handleClick('estado',e.target.innerText) }}
                 />
                 <Dropdown
                     titulo={'Cidade'}
                     desc={desc['cidade'] ? desc['cidade'] : 'Todos'}
                     icone={'location_city'}
-                    lista={['Todos',...listarFiltros('cidade')]}
+                    lista={['Todos',...listaCity(desc['estado'])]}
                     onClick={(e) => { handleClick('cidade',e.target.innerText) }}
                 />
                 <Dropdown
@@ -57,6 +68,7 @@ export default function BarFilter({desc, setDesc,listPets}) {
                     lista={['Todos',...listarFiltros('genero')]}
                     onClick={(e) => { handleClick('genero',e.target.innerText) }}
                 />
+                <Button titulo="Limpar" className={'btnFilter'} icone={'delete'} onClick={()=>{ResetDes()}}/>
             </div>
 
         </div>

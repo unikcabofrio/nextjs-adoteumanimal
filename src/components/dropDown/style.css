@@ -40,6 +40,7 @@
 
 .dropdown-content {
   width: 100%;
+  height: auto;
   margin-top: .2rem;
   padding: .2rem .5rem;
   border-radius: .3rem;
@@ -50,10 +51,14 @@
   z-index: 1;
 }
 
-.dropdown-content > div {
+.dropdown-content > div{
+  max-height: 350px;
+  overflow: auto;
+}
+
+.dropdown-content > div > div {
   color: #F2762E;
   padding: .2rem .5rem;
-  display: block;
   cursor: pointer;
 }
 
@@ -61,6 +66,6 @@
   display: block;
 }
 
-.dropdown-content > div:hover {color: #592525;}
+.dropdown-content > div > div:hover {color: #592525;}
 
 /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
