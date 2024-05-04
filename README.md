@@ -24,12 +24,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 
 ## Fututas atualizações
 
-- Adicionar função de limpar filtros
 - Adicionar função nos botões : Cadastra um pet - Adotar - Detalhes
-- Adicionar Footer no site
-- Adiciona Página [ Como adotar ]
-- Adiciona Página [ Sobre ]
-- Adiciona Página [ FAQ ]
 
 ## Melhorias
 
