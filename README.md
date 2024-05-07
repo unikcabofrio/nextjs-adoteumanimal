@@ -22,7 +22,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 - Preview em tempo real
 - Multiplataforma
 
-## Fututas atualizações
+## Futuras atualizações
 
 - Adicionar função nos botões : Cadastra um pet - Adotar - Detalhes
 
