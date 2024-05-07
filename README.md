@@ -17,18 +17,10 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 
 `ANOTHER_API_KEY` -->
 
-## Funcionalidades
-
-- Preview em tempo real
-- Multiplataforma
-
 ## Futuras atualizações
 
 - Adicionar função nos botões : Cadastra um pet - Adotar - Detalhes
-
-## Melhorias
-
-- Foi adicionado um sistema de busca
+- Colocar o site responsivo
 
 ## Autores
 
